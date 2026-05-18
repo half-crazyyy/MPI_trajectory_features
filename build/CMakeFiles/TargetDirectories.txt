@@ -1,3 +1,0 @@
-/Users/Saveliy/Desktop/Распал 2 сем/MPI_trajectory_features/build/CMakeFiles/mpi_trajectory_features.dir
-/Users/Saveliy/Desktop/Распал 2 сем/MPI_trajectory_features/build/CMakeFiles/edit_cache.dir
-/Users/Saveliy/Desktop/Распал 2 сем/MPI_trajectory_features/build/CMakeFiles/rebuild_cache.dir

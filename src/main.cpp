@@ -3,6 +3,7 @@
 #include "distributed_processor.hpp"
 
 #include <mpi.h>
+#include <fmt/core.h>
 #include <exception>
 #include <iomanip>
 #include <iostream>
@@ -51,13 +52,13 @@ int main(int argc, char** argv) {
         if (rank == 0) {
             write_feature_csv(options.output_path, result.final_stats);
 
-            std::cout << std::fixed << std::setprecision(6);
-            std::cout << "MPI trajectory feature calculation finished\n";
-            std::cout << "Processes: " << process_count << '\n';
-            std::cout << "Input points: " << result.total_points << '\n';
-            std::cout << "Trajectories: " << result.total_trajectories << '\n';
-            std::cout << "Best time: " << result.elapsed_seconds << " seconds\n";
-            std::cout << "Output: " << options.output_path << '\n';
+            fmt::print("MPI trajectory feature calculation finished\n");
+            fmt::print("Processes: {}\n", process_count);
+            fmt::print("Input points: {}\n", result.total_points);
+            fmt::print("Trajectories: {}\n", result.total_trajectories);
+            fmt::print("Best time: {:.6f} seconds\n", result.elapsed_seconds);
+            fmt::print("Output: {}\n", options.output_path);
+
 
             // Сохранение строки бенчмарка в общий CSV-файл
             // По этому файлу затем строятся таблицы ускорения и графики
